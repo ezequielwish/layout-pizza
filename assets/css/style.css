@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: white;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+*::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 20px;
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(78, 78, 78);
+    display: grid;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    min-height: 640px;
+    width: 100%;
+    height: max-content;
+}
+
+header, nav, article, footer, section, aside{
+    background-color: rgba(255, 255, 255, 0.349);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.164);
+}
+
+div#scrollable{
+    overflow-y: scroll;
+    max-height: 770px;
+    min-width: 700px;
+}
+
+article{
+    height: 300px;
+}
+
+section{
+    min-width: 600px;
+}
+
+nav, aside{
+    min-width: 130px;
+    height: 750px;
+    width: 100%;
+}
