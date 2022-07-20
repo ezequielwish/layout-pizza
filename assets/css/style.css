@@ -1,57 +1,113 @@
-*{
+@charset "UTF-8";
+
+:root {
+    --color1: rgb(64, 71, 95);
+    --color2: rgba(255, 250, 250, 0.3);
+    --color3: rgba(255, 250, 250, 0.3);
+    --color4: rgba(255, 250, 250, 0.3);
+    --color5: rgba(255, 250, 250, 0.3);
+}
+
+* {
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
     color: white;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 *::-webkit-scrollbar {
-    width: 12px;
+    max-width: 12px;
   }
   
 *::-webkit-scrollbar-thumb {
-    background-color: grey;
+    background-color: var(--color2);
     border-radius: 20px;
 }
 
-body{
-    margin: 0px;
-    background-color: rgb(78, 78, 78);
-    display: grid;
+body {
+    background-color: var(--color1);
 }
 
-main{
+main {
     display: flex;
-    justify-content: center;
-    min-height: 640px;
-    width: 100%;
-    height: max-content;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-header, nav, article, footer, section, aside{
-    background-color: rgba(255, 255, 255, 0.349);
+header, nav, article, footer, section, aside {
     padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
     text-align: center;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.164);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-div#scrollable{
+header, footer {
+    background-color: var(--color4);
+}
+
+section {
+    background-color: var(--color2);
+}
+
+article {
+    background-color: var(--color5);
+    min-height: 300px;
+    border-radius: 5px;
+}
+
+nav, article, section, aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+nav > *, aside > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color2);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+div#scrollable {
     overflow-y: scroll;
-    max-height: 770px;
-    min-width: 700px;
+    max-height: 750px;
+    width: 700px;
 }
 
-article{
-    height: 300px;
-}
 
-section{
-    min-width: 600px;
-}
-
-nav, aside{
-    min-width: 130px;
+nav, aside {
+    background-color: var(--color3);
+    width: 300px;
     height: 750px;
-    width: 100%;
+}
+
+@media (max-width: 800px) {
+
+    header, footer {
+        box-shadow: none;
+    }
+
+    main {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    nav, aside {
+        background-color: var(--color4);
+        margin: 0;
+        flex-direction: row;
+        height: 50px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    div#scrollable {
+        max-height: none;
+        width: 100%;
+    }
 }
