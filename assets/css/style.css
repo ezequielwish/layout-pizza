@@ -105,11 +105,11 @@ div#scrollable {
 }
 
 nav, aside {
-    background-color: #ffffff6b;
+    background-color: rgba(255, 219, 219, 0.4);
     width: 300px;
     height: 750px;
     border-radius: 10px;
-    backdrop-filter: 3px;
+    backdrop-filter: blur(4px);
 }
 
 @media (max-width: 800px) {
