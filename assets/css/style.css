@@ -1,21 +1,22 @@
 @charset "UTF-8";
 
 :root {
-    --color1: rgb(64, 71, 95);
-    --color2: rgba(255, 250, 250, 0.3);
-    --color3: rgba(255, 250, 250, 0.3);
-    --color4: rgba(255, 250, 250, 0.3);
-    --color5: rgba(255, 250, 250, 0.3);
+    --color1: #a10000;
+    --color2: #920c0c;
+    --color3: #cf3939;
+    --color4: #ffbb00;
+    --color5: #e0e0e0;
 }
 
 * {
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
-    color: white;
+    color: yellow;
     text-decoration: none;
     padding: 0;
     margin: 0;
     border: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 *::-webkit-scrollbar {
@@ -31,12 +32,13 @@ a {
     font-weight: bold;
 }
 
-a:hover {
+a:hover, #selecionado {
+    background-color: var(--color2);
     border-bottom: 5px solid;
 }
 
 body {
-    background-color: var(--color1);
+    background-image: url(../images/background.jpg);
 }
 
 main {
@@ -52,7 +54,11 @@ header, nav, article, footer, section, aside {
 }
 
 header, footer {
-    background-color: var(--color4);
+    background-image: linear-gradient(to bottom, var(--color1), var(--color3));
+}
+
+header > *, footer > * {
+    color: white;
 }
 
 section {
@@ -63,6 +69,13 @@ article {
     background-color: var(--color5);
     min-height: 300px;
     border-radius: 5px;
+}
+
+article > p {
+    color: var(--color2);
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 10px 0;
 }
 
 nav, article, section, aside {
@@ -76,7 +89,7 @@ nav > *, aside > * {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color2);
+    background-color: var(--color1);
     padding: 5px;
     height: 20%;
     width: 100%;
@@ -89,9 +102,11 @@ div#scrollable {
 }
 
 nav, aside {
-    background-color: var(--color3);
+    background-color: #cf3939a1;
     width: 300px;
     height: 750px;
+    border-radius: 10px;
+    backdrop-filter: 3px;
 }
 
 @media (max-width: 800px) {
@@ -107,12 +122,14 @@ nav, aside {
     }
 
     nav, aside {
-        background-color: var(--color4);
+        background-color: var(--color3);
         margin: 0;
         flex-direction: row;
         height: 50px;
         width: 100%;
         box-shadow: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
     nav > *, aside > * {
