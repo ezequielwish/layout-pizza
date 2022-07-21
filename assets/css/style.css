@@ -4,14 +4,14 @@
     --color1: #a10000;
     --color2: #920c0c;
     --color3: #cf3939;
-    --color4: #ffbb00;
+    --color4: #ffe600;
     --color5: #e0e0e0;
 }
 
 * {
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
-    color: yellow;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -34,7 +34,7 @@ a {
 
 a:hover, #selecionado {
     background-color: var(--color2);
-    border-bottom: 5px solid;
+    border-bottom: 5px solid var(--color4);
 }
 
 body {
@@ -50,7 +50,7 @@ main {
 header, nav, article, footer, section, aside {
     padding: 10px;
     text-align: center;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 header, footer {
@@ -63,6 +63,9 @@ header > *, footer > * {
 
 section {
     background-color: var(--color2);
+}
+section > h2 {
+    color: var(--color4);
 }
 
 article {
@@ -102,7 +105,7 @@ div#scrollable {
 }
 
 nav, aside {
-    background-color: #cf3939a1;
+    background-color: #ffffff6b;
     width: 300px;
     height: 750px;
     border-radius: 10px;
