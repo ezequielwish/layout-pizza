@@ -99,6 +99,7 @@ section > h2 {
 article {
     background-color: var(--color5);
     min-height: 300px;
+    max-width: 600px;
     border-radius: 5px;
 }
 
@@ -131,7 +132,7 @@ nav > *, aside > * {
 
 div#scrollable {
     overflow-y: scroll;
-    max-height: 800px;
+    max-height: 760px;
     max-width: 900px;
 }
 
