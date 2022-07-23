@@ -29,6 +29,7 @@
 }
 
 a {
+    transition-duration: .5s;
     font-weight: bold;
 }
 
@@ -57,6 +58,13 @@ header, footer {
     background-image: linear-gradient(to bottom, var(--color1), var(--color3));
 }
 
+header {
+    border-bottom: 10px solid var(--color4);
+    height: 50px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
 header > *, footer > * {
     color: white;
 }
@@ -81,6 +89,7 @@ article > p {
     margin: 10px 0;
 }
 
+
 nav, article, section, aside {
     display: flex;
     flex-direction: column;
@@ -94,14 +103,14 @@ nav > *, aside > * {
     justify-content: center;
     background-color: var(--color1);
     padding: 5px;
-    height: 20%;
+    height: 100%;
     width: 100%;
 }
 
 div#scrollable {
     overflow-y: scroll;
     max-height: 750px;
-    width: 700px;
+    width: 50%;
 }
 
 nav, aside {
@@ -110,7 +119,12 @@ nav, aside {
     height: 750px;
     border-radius: 10px;
     backdrop-filter: blur(4px);
+    gap: 10px;
 }
+
+nav {
+    transition-duration: .5s;
+    }
 
 @media (max-width: 800px) {
 
@@ -125,19 +139,27 @@ nav, aside {
     }
 
     nav, aside {
-        background-color: var(--color3);
-        margin: 0;
         flex-direction: row;
         height: 50px;
         width: 100%;
+    }
+
+    aside {
+        margin: 0;
+        background-color: var(--color1);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
         box-shadow: none;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
     }
 
     nav > *, aside > * {
+        border-radius: 10px;
         width: 25%;
         height: 100%;
+    }
+
+    a:hover {
+        border: none;
     }
 
     div#scrollable {
