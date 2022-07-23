@@ -47,6 +47,7 @@ a:hover {
 
 body {
     background-image: url(../images/background.jpg);
+    overflow-x: hidden;
 }
 
 main {
@@ -63,6 +64,7 @@ header, nav, article, footer, section, aside {
 
 header, footer {
     background-image: linear-gradient(to bottom, var(--color1), var(--color3));
+    width: 100%;
 }
 
 header {
@@ -126,7 +128,7 @@ nav > *, aside > * {
 
 div#scrollable {
     overflow-y: scroll;
-    max-height: 750px;
+    max-height: 760px;
     width: 50%;
 }
 
