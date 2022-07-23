@@ -29,13 +29,18 @@
 }
 
 a {
-    transition-duration: .5s;
+    transition-duration: 0.5s;
     font-weight: bold;
 }
 
-a:hover, #selecionado {
+a:hover {
+    border-radius: 50%;
+    background-color: var(--color3);
+}
+
+#selecionado {
+    text-decoration: underline;
     background-color: var(--color2);
-    border-bottom: 5px solid var(--color4);
 }
 
 body {
@@ -45,7 +50,7 @@ body {
 main {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center;       
 }
 
 header, nav, article, footer, section, aside {
